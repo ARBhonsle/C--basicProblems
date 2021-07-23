@@ -7,7 +7,8 @@ namespace CSharp_basicProblems
         static void Main(string[] args)
         {
             Console.WriteLine("C# Basic Problems");
-            Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2 4.Harmonic Number 5.Factors");
+            Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2 ");
+            Console.WriteLine("4.Harmonic Number 5.Factors 6.Finding Qoutient and Remainder");
             int Choice = Convert.ToInt32(Console.ReadLine());
             int number;
             switch (Choice)
@@ -64,6 +65,16 @@ namespace CSharp_basicProblems
                     number = Convert.ToInt32(Console.ReadLine());
                     Factors prime = new Factors(number);
                     prime.PrimeFactors();
+                    break;
+                case 6:
+                    Console.WriteLine("Finding Qoutient and Remainder");
+                    Console.WriteLine("Give two numbers:");
+                    Console.WriteLine("Divisor");
+                    int number1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Dividend");
+                    int number2 = Convert.ToInt32(Console.ReadLine());
+                    QoutientRemainder division = new QoutientRemainder(number1, number2);
+                    division.Operation();
                     break;
                 default: 
                     Console.WriteLine("Wrong Input!!");
