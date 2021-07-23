@@ -7,8 +7,9 @@ namespace CSharp_basicProblems
         static void Main(string[] args)
         {
             Console.WriteLine("C# Basic Problems");
-            Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2");
+            Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2 4.Harmonic Number");
             int Choice = Convert.ToInt32(Console.ReadLine());
+            int number;
             switch (Choice)
             {
                 case 1:
@@ -39,9 +40,16 @@ namespace CSharp_basicProblems
                 case 3:
                     Console.WriteLine("Power of 2");
                     Console.WriteLine("Give number n<31");
-                    int number = Convert.ToInt32(Console.ReadLine());
+                    number = Convert.ToInt32(Console.ReadLine());
                     PowerOfTwo table = new PowerOfTwo(number);
                     table.TableOfTwo();
+                    break;
+                case 4:
+                    Console.WriteLine("Harmonic Number");
+                    Console.WriteLine("Give number (integer):");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    HarmonicNumber series = new HarmonicNumber(number);
+                    series.NumberProgression();
                     break;
                 default: 
                     Console.WriteLine("Wrong Input!!");
