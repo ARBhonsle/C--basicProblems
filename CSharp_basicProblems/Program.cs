@@ -46,10 +46,17 @@ namespace CSharp_basicProblems
                     break;
                 case 4:
                     Console.WriteLine("Harmonic Number");
-                    Console.WriteLine("Give number (integer):");
+                    Console.WriteLine("Give number (integer>0):");
                     number = Convert.ToInt32(Console.ReadLine());
-                    HarmonicNumber series = new HarmonicNumber(number);
-                    series.NumberProgression();
+                    if (number > 0)
+                    {
+                        HarmonicNumber series = new HarmonicNumber(number);
+                        series.NumberProgression();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Wrong Input");
+                    }
                     break;
                 case 5:
                     Console.WriteLine("Factors of Number");
