@@ -9,8 +9,9 @@ namespace CSharp_basicProblems
             Console.WriteLine("C# Basic Problems");
             Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2 ");
             Console.WriteLine("4.Harmonic Number 5.Factors 6.Finding Qoutient and Remainder");
+            Console.WriteLine("7.Swap numbers");
             int Choice = Convert.ToInt32(Console.ReadLine());
-            int number;
+            int number,number1,number2;
             switch (Choice)
             {
                 case 1:
@@ -70,11 +71,21 @@ namespace CSharp_basicProblems
                     Console.WriteLine("Finding Qoutient and Remainder");
                     Console.WriteLine("Give two numbers:");
                     Console.WriteLine("Divisor");
-                    int number1 = Convert.ToInt32(Console.ReadLine());
+                    number1 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Dividend");
-                    int number2 = Convert.ToInt32(Console.ReadLine());
+                    number2 = Convert.ToInt32(Console.ReadLine());
                     QoutientRemainder division = new QoutientRemainder(number1, number2);
                     division.Operation();
+                    break;
+                case 7:
+                    Console.WriteLine("Swap numbers");
+                    Console.WriteLine("Give two numbers:");
+                    Console.WriteLine("Number1");
+                    number1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Number2");
+                    number2 = Convert.ToInt32(Console.ReadLine());
+                    SwapNumbers values = new SwapNumbers(number1, number2);
+                    values.Swap();
                     break;
                 default: 
                     Console.WriteLine("Wrong Input!!");
