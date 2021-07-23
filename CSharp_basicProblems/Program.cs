@@ -7,7 +7,7 @@ namespace CSharp_basicProblems
         static void Main(string[] args)
         {
             Console.WriteLine("C# Basic Problems");
-            Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2 4.Harmonic Number");
+            Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2 4.Harmonic Number 5.Factors");
             int Choice = Convert.ToInt32(Console.ReadLine());
             int number;
             switch (Choice)
@@ -50,6 +50,13 @@ namespace CSharp_basicProblems
                     number = Convert.ToInt32(Console.ReadLine());
                     HarmonicNumber series = new HarmonicNumber(number);
                     series.NumberProgression();
+                    break;
+                case 5:
+                    Console.WriteLine("Factors of Number");
+                    Console.WriteLine("Give number (integer):");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    Factors prime = new Factors(number);
+                    prime.PrimeFactors();
                     break;
                 default: 
                     Console.WriteLine("Wrong Input!!");
