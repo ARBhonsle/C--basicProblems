@@ -9,7 +9,7 @@ namespace CSharp_basicProblems
             Console.WriteLine("C# Basic Problems");
             Console.WriteLine("Choose Problems: 1.Flip Coin Percent 2.Leap Year 3.Power of 2 ");
             Console.WriteLine("4.Harmonic Number 5.Factors 6.Finding Qoutient and Remainder");
-            Console.WriteLine("7.Swap numbers 8.Even or Odd numbers");
+            Console.WriteLine("7.Swap numbers 8.Even or Odd numbers 9.Alphabet Vowel/Consonant");
             int Choice = Convert.ToInt32(Console.ReadLine());
             int number,number1,number2;
             switch (Choice)
@@ -93,6 +93,13 @@ namespace CSharp_basicProblems
                     number = Convert.ToInt32(Console.ReadLine());
                     EvenOdd result = new EvenOdd(number);
                     result.Operation();
+                    break;
+                case 9:
+                    Console.WriteLine("Alphabet Vowel/Consonant");
+                    Console.WriteLine("Give an alphabet:");
+                    String character = Console.ReadLine();
+                    Alphabet alphabet= new Alphabet(character.ToCharArray()[0]);
+                    alphabet.Check();
                     break;
                 default: 
                     Console.WriteLine("Wrong Input!!");
